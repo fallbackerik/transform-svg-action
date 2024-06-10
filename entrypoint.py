@@ -21,8 +21,14 @@ for file in glob.glob(sys.argv[2]):
   width = int(root.attrib["width"])
   height = int(root.attrib["height"])
 
-  cx = str(random.randint(5, 30)) + "%"
-  cy = str(random.randint(5, 30)) + "%"
-  r = str(random.randint(3, 30)) + "%"
+  cx = 
+  cy 
+  r = 
 
-  print(width, height, cx, cy, r)
+  circle = etree.Element(
+    tag="circle",
+    cx=str(random.randint(5, 30)) + "%",
+    cy=str(random.randint(5, 30)) + "%",
+    r=str(random.randint(3, 30)) + "%",
+    fill="red",
+  )
