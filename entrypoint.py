@@ -22,11 +22,21 @@ for file in glob.glob(sys.argv[2]):
 
   width = int(root.attrib["width"])
   height = int(root.attrib["height"])
+
+  radius = random.randint(3, 30)
+  cx_gen = random.randint(5, 30)
+  cy_gen = random.randint(5, 30)
+
+  # limit at picture boundaries
+  cx_gen_wl = max(cx_gen , radius+1)
+  cx_gen_wlwr = min(cx_gen_wl, 99-radius)
+  cy_gen_wl = max(cy_gen, radius+1)
+  cy_gen_wlwr = min(cy_gen_wl, 99-radius)
   
   circle = etree.Element("circle", {
-    "cx" : f"{random.randint(5, 30)}%",
-    "cy" : f"{random.randint(5, 30)}%",
-    "r" : f"{random.randint(3, 30)}%",
+    "cx" : f"{cx_gen_wlwr}%",
+    "cy" : f"{cy_gen_wlwr}%",
+    "r" : f"{radius}%",
     "fill" : "red",
   })
   root.append(circle)
