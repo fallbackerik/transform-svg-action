@@ -4,5 +4,7 @@ import glob
 
 import xml.etree.ElementTree as etree
 
-with etree.parse(glob.glob(sys.argv[2])) as tree:
-  pass
+for file in glob.glob(sys.argv[2]):
+  print("opening...", file)
+  with etree.parse(file) as tree:
+    pass
