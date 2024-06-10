@@ -1,5 +1,2 @@
-FROM debian:latest
-RUN apt update
-RUN apt install python-is-python3 -y
-COPY *.py /
+FROM python:latest
 ENTRYPOINT [ "python", "/entrypoint.py"]
