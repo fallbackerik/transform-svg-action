@@ -5,6 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Transform SVGs
     steps:
+      - uses: actions/checkout@v4
       - name: Transform SVGs
         id: transform
         uses: fallbackerik/transform-svg-action@main
