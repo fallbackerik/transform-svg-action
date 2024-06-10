@@ -1,0 +1,11 @@
+= Transform SVG Action
+//Settings:
+:icons: font
+:bibtex-style: harvard-gesellschaft-fur-bildung-und-forschung-in-europa
+:toc:
+
+== Introduction
+
+This Action takes a list of svg files and transforms them according to a given python script.
+
+TODO: Describe how to use it.
