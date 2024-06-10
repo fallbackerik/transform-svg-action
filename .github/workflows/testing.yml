@@ -1,12 +1,15 @@
 on: [push, workflow_dispatch]
 
 jobs:
-  test_transform_job:
+  hello_world_job:
     runs-on: ubuntu-latest
-    name: A job that runs the transform script on some test data
+    name: A job to say hello
     steps:
-      - name: Transform SVGs
-        id: transform
+      - name: Hello world action step
+        id: hello
         uses: fallbackerik/transform-svg-action@main
-      - name: List generated files
-        run: echo "The following files have been generated: ${{ steps.transform.outputs.time }}"
+        with:
+          test-input: 'Mona the Octocat'
+      # Use the output from the `hello` step
+      - name: Get the output time
+        run: echo "The time was ${{ steps.hello.outputs.time }}"
