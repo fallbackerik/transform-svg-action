@@ -9,7 +9,7 @@ SVG_NAMESPACE = "https://www.w3.org/2000/svg"
 modified = []
 for file in glob.glob(sys.argv[2]):
   print("opening...", file)
-  modified.append(os.path.basename(filename))
+  modified.append(os.path.basename(file))
   tree = etree.parse(file)
   root = tree.getroot()
 
