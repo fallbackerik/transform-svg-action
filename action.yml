@@ -10,6 +10,6 @@ outputs:
     description: 'when the action was executed'
 runs:
   using: 'docker'
-  image: 'Containerfile'
+  image: 'Dockerfile'
   args:
     - ${{ inputs.test-input }}
