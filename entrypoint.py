@@ -20,11 +20,7 @@ for file in glob.glob(sys.argv[2]):
 
   width = int(root.attrib["width"])
   height = int(root.attrib["height"])
-
-  cx = 
-  cy 
-  r = 
-
+  
   circle = etree.Element(
     tag="circle",
     cx=str(random.randint(5, 30)) + "%",
