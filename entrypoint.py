@@ -1,12 +1,5 @@
-import sys
-import os
-import datetime
-import glob
+from xml import ElementTree as etree
+import random
 
-for argv in sys.argv:
-  print(argv, glob.glob(sys.argv[2]))
-
-with open(os.environ["GITHUB_OUTPUT"], "a") as output:
-  output.write(f"time={datetime.datetime.now()}\n")
-  output.write(f"svgs-modified=1.svg 2.svg 3.svg\n")
-print("Hello ", str(sys.argv), ":", os.environ["GITHUB_OUTPUT"], "!")
+with etree.parse(sys.argv[2]) as tree:
+  pass
