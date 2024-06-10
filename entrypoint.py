@@ -28,3 +28,5 @@ for file in glob.glob(sys.argv[2]):
     r=str(random.randint(3, 30)) + "%",
     fill="red",
   )
+  root.append(circle)
+  tree.write("output/testing.svg", xml_declaration=True, encoding="utf-8")
