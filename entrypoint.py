@@ -21,11 +21,3 @@ for file in glob.glob(sys.argv[2]):
   width = int(root.attrib["width"])
   height = int(root.attrib["height"])
   
-  circle = etree.Element(tag="circle",
-    cx=str(random.randint(5, 30)) + "%",
-    cy=str(random.randint(5, 30)) + "%",
-    r=str(random.randint(3, 30)) + "%",
-    fill="red",
-  )
-  root.append(circle)
-  tree.write("output/testing.svg", xml_declaration=True, encoding="utf-8")
