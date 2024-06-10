@@ -11,3 +11,8 @@ jobs:
         uses: fallbackerik/transform-svg-action@main
       - name: List the generated files
         run: echo "The files generated are ${{ steps.transform.outputs.svgs-modified }}"
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4.3.3
+        with:
+          name: steps.transform.outputs.svgs-modified
+          path: "output/"
