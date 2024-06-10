@@ -21,8 +21,8 @@ for file in glob.glob(sys.argv[2]):
   width = int(root.attrib["width"])
   height = int(root.attrib["height"])
 
-  cx = random.randint(5, 30) + "%"
-  cy = random.randint(5, 30) + "%"
-  r = random.randint(3, 30) + "%"
+  cx = str(random.randint(5, 30)) + "%"
+  cy = str(random.randint(5, 30)) + "%"
+  r = str(random.randint(3, 30)) + "%"
 
   print(width, height, cx, cy, r)
