@@ -30,7 +30,7 @@ for file in glob.glob(sys.argv[2]):
     "fill" : "red",
   })
   root.append(circle)
-  tree.write("output/testing.svg", xml_declaration=True, encoding="utf-8")
+  tree.write(f"output/{file}", xml_declaration=True, encoding="utf-8")
 
 with open(os.environ["GITHUB_OUTPUT"], "a") as output:
   output.write(f"svgs-modified={" ".join(modified)}\n")
