@@ -30,3 +30,5 @@ for file in glob.glob(sys.argv[2]):
   root.append(circle)
   tree.write("output/testing.svg", xml_declaration=True, encoding="utf-8")
 
+with open(os.environ["GITHUB_OUTPUT"], "a") as output:
+  output.write(f"svgs-modified=testing.svg\n")
