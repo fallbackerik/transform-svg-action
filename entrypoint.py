@@ -17,4 +17,12 @@ for file in glob.glob(sys.argv[2]):
 
   if "width" not in root.attrib or "height" not in root.attrib:
     raise ValueError("Expected the svg root element to contain width and height attributes.")
-  print("attrib", root.attrib)
+
+  width = int(root.attrib["width"])
+  height = int(root.attrib["height"])
+
+  cx = random.randint(5, 30) + "%"
+  cy = random.randint(5, 30) + "%"
+  r = random.randint(3, 30) + "%"
+
+  print(width, height, cx, cy, r)
