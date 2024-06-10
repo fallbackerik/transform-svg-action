@@ -6,9 +6,10 @@ import glob
 import xml.etree.ElementTree as etree
 
 SVG_NAMESPACE = "https://www.w3.org/2000/svg"
-
+modified = []
 for file in glob.glob(sys.argv[2]):
   print("opening...", file)
+  modified.append(os.path.basename(filename))
   tree = etree.parse(file)
   root = tree.getroot()
 
@@ -32,4 +33,4 @@ for file in glob.glob(sys.argv[2]):
   tree.write("output/testing.svg", xml_declaration=True, encoding="utf-8")
 
 with open(os.environ["GITHUB_OUTPUT"], "a") as output:
-  output.write(f"svgs-modified=testing.svg\n")
+  output.write(f"svgs-modified={" ".join(modified)}\n")
