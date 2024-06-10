@@ -8,8 +8,5 @@ jobs:
       - name: Hello world action step
         id: hello
         uses: fallbackerik/transform-svg-action@main
-        with:
-          test-input: 'Mona the Octocat'
-      # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
