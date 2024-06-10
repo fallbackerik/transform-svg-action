@@ -1,3 +1,3 @@
 FROM debian:latest
 COPY *.py ./
-CMD [ "python", "./entrypoint.py"]
+ENTRYPOINT [ "python", "./entrypoint.py"]
