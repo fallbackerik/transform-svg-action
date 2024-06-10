@@ -9,4 +9,4 @@ jobs:
         id: transform
         uses: fallbackerik/transform-svg-action@main
       - name: List generated files
-        run: echo "The following files have been generated: ${{ steps.transform.outputs.svgs-modified }}"
+        run: echo "The following files have been generated: ${{ steps.transform.outputs.time }}"
