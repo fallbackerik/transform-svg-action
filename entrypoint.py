@@ -3,7 +3,8 @@ import os
 import datetime
 import glob
 
-print(glob.glob(sys.argv[2]))
+for argv in sys.argv:
+  print(argv, glob.glob(sys.argv[2]))
 
 with open(os.environ["GITHUB_OUTPUT"], "a") as output:
   output.write(f"time={datetime.datetime.now()}\n")
