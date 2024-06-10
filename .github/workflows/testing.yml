@@ -9,4 +9,4 @@ jobs:
         id: hello
         uses: fallbackerik/transform-svg-action@main
       - name: Get the output time
-        run: echo "The files generated are: ${{ steps.hello.outputs.svgs-modified }}"
+        run: echo "The files generated are\: ${{ steps.hello.outputs.svgs-modified }}"
