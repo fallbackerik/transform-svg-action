@@ -24,8 +24,8 @@ for file in glob.glob(sys.argv[2]):
   height = int(root.attrib["height"])
 
   radius = random.randint(3, 30)
-  cx_gen = random.randint(5, 30)
-  cy_gen = random.randint(5, 30)
+  cx_gen = random.randint(5, 95)
+  cy_gen = random.randint(5, 95)
 
   # limit at picture boundaries
   cx_gen_wl = max(cx_gen , radius+1)
