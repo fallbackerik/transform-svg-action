@@ -8,7 +8,7 @@ inputs:
   svgs-in:
     description: 'path of input svgs'
     required: true
-    default: 'input/*.svg'
+    default: '/input/*.svg'
   svgs-out:
     despriction: 'path to put transformed svgs'
     required: true
