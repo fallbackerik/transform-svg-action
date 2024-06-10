@@ -21,7 +21,12 @@ for file in glob.glob(sys.argv[2]):
   width = int(root.attrib["width"])
   height = int(root.attrib["height"])
   
-  circle = etree.Element("circle", f"{random.randint(5, 30)}%", f"{random.randint(5, 30)}%", f"{random.randint(3, 30)}%", fill="red")
+  circle = etree.Element("circle", {
+    "cx" : f"{random.randint(5, 30)}%",
+    "cy" : f"{random.randint(5, 30)}%",
+    "r" : f"{random.randint(3, 30)}%",
+    "fill" : "red",
+  })
   root.append(circle)
   tree.write("output/testing.svg", xml_declaration=True, encoding="utf-8")
 
