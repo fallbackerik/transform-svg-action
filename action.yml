@@ -1,0 +1,15 @@
+name: 'Hello Containerworld'
+description: 'transform a given set of svg files according to the provided python scripts'
+inputs:
+  test-input:
+    description: 'just testing to use inputs to actions'
+    required: true
+    default: 'Containerworld'
+outputs:
+  time:
+    description: 'when the action was executed'
+runs:
+  using: 'docker'
+  image: 'Containerfile'
+  args:
+    - ${{ inputs.test-input }}
