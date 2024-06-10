@@ -3,10 +3,10 @@ on: [push, workflow_dispatch]
 jobs:
   hello_world_job:
     runs-on: ubuntu-latest
-    name: A job to say hello
+    name: Transform SVGs
     steps:
-      - name: Hello world action step
-        id: hello
+      - name: Transform SVGs
+        id: transform
         uses: fallbackerik/transform-svg-action@main
-      - name: Get the output time
-        run: echo "The files generated are ${{ steps.hello.outputs.svgs-modified }}"
+      - name: List the generated files
+        run: echo "The files generated are ${{ steps.transform.outputs.svgs-modified }}"
