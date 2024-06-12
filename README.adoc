@@ -8,4 +8,10 @@
 
 This Action takes a list of svg files and transforms them according to a given python script.
 
-TODO: Describe how to use it.
+* The SVGs that should be processed should be stored under https://github.com/fallbackerik/transform-svg-action/tree/main/input[/input/].
+* The https://docs.github.com/de/actions[Github Action] that executes the transformation script is https://github.com/fallbackerik/transform-svg-action/blob/main/action.yml[here]
+* The https://docs.github.com/en/actions/using-workflows/about-workflows[Workflow] that runs the action on every push, is https://github.com/fallbackerik/transform-svg-action/blob/main/.github/workflows/testing.yml[here]
+* The Python script that adds a circle to an SVG is https://github.com/fallbackerik/transform-svg-action/blob/main/entrypoint.py[here]
+* And for the Github Action to work in a container, the https://docs.github.com/en/actions/creating-actions/creating-a-docker-container-action[Dockerfile] is https://github.com/fallbackerik/transform-svg-action/blob/main/Dockerfile[here]
+
+Currently, I make the action more flexible, so users in other repositories can provide their own Python scripts to do even more transformations.
